@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="url=index.html">
+    <link rel="stylesheet" href="style.css">
+    <title>My Personal Space</title>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        <div class="floating-circle circle-3"></div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>✨ Welcome to My Space ✨</h1>
+            <p>Discover everything about me</p>
+        </div>
+
+        <div class="grid">
+            <!-- My Current Mood -->
+            <div class="card">
+                <h2><span class="emoji">💭</span> My Current Mood</h2>
+                <p></p>
+                <div class="mood-line-container">
+                    <div class="mood-line">
+                        <div class="mood-indicator" id="mood-indicator"></div>
+                    </div>
+                </div>
+                <p id="mood-text">Currently feeling pretty good today! 😊</p>
+            </div>
+
+            <!-- Random Fact -->
+            <div class="card">
+                <h2><span class="emoji">🎲</span> Random Fact About Me</h2>
+                <div class="fact-display" id="fact-display">
+                    Click the button to discover something about me!
+                </div>
+                <button class="btn" onclick="showRandomFact()">Tell Me Something!</button>
+            </div>
+
+            <!-- Quiz About Me -->
+            <div class="card">
+                <h2><span class="emoji">🧠</span> Quiz About Me</h2>
+                <div id="quiz-container">
+                    <div id="quiz-question"></div>
+                    <div id="quiz-options" class="quiz-options"></div>
+                    <button class="btn" onclick="startQuiz()">Start Quiz</button>
+                    <button class="btn hidden" id="next-btn" onclick="nextQuestion()">Next Question</button>
+                </div>
+                <div id="quiz-result" class="hidden">
+                    <h3>Quiz Complete!</h3>
+                    <p id="score-display"></p>
+                    <button class="btn" onclick="resetQuiz()">Try Again</button>
+                </div>
+            </div>
+
+            <!-- GPA Display -->
+            <div class="card">
+                <h2><span class="emoji">🎓</span> My Academic Achievement</h2>
+                <div class="gpa-display">
+                    <div>Current GPA</div>
+                    <div class="gpa-number" id="gpa-number"></div>
+                    <div>out of 4.0</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill" style="width: 81.75%"></div>
+                </div>
+            </div>
+
+            <!-- Movies/Shows -->
+            <div class="card">
+                <h2><span class="emoji">🎬</span> This Month's Watchlist</h2>
+                <div id="movies-list">
+                </div>
+            </div>
+
+            <!-- Music Player -->
+            <div class="card">
+                <h2><span class="emoji">🎵</span> My Music Vibes</h2>
+                <div id="current-song">
+                    <div class="music-item" id="music-item">
+                        <div>
+                            <div id="song-display">Click to play a random song!</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn" onclick="playRandomSong()">🎲 Random Song</button>
+                <button class="btn" onclick="nextSong()">⏭️ Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
