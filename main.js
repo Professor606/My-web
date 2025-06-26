@@ -1,5 +1,5 @@
 // My current mood
-let currentMoodLevel = 80; // 0-100 scale
+let currentMoodLevel = 75; // 0-100 scale
 let currentGPA = 4; // 0-4 scale
 
 const personalFacts = [
